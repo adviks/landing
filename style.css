@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Instrument+Serif:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100vh;
+  font-family: "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Helvetica Neue", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+body {
+  text-align: left;
+  margin: 0 auto;
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  max-width: 650px;
+  font-size: 18px;
+}
+
+#logo {
+  font-size: 24px;
+  font-weight: 700;
+  border: none;
+}
+#logo:hover {
+  color: #eee;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  max-width: 100%;
+  margin-top: 4.5rem;
+}
+h1 {
+  font-size: calc(40px + (50 - 40) * ((100vw - 300px) / (1600 - 300)));
+  margin-bottom: 1rem;
+  line-height: 1.1;
+  font-family: "Instrument Serif", serif;
+  font-weight: normal;
+}
+
+p {
+  margin-bottom: 2rem;
+}
+
+.privacy-text {
+  font-size: 12px;
+  margin-top: 1rem;
+  text-align: center;
+  color: #697177;
+}
+
+.success-message {
+  display: none;
+  width: 100%;
+  background-color: #00a86a1a;
+  border: 1px solid #00a86b;
+  color: #fff;
+  /* font-size: 1.2rem; */
+  text-align: left;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  border-bottom: 1px solid #e54f2d;
+}
+
+a:hover {
+  color: #aaa;
+}
+
+/* Substack Styles */
+
+#substack-posts {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Space between posts */
+}
+
+.post {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border-bottom: 1px solid #ddd; Divider between posts */
+  padding: 10px 0;
+}
+
+.text-content {
+  flex: 1; /* Text content takes most of the width */
+  padding-right: 15px; /* Space between text and thumbnail */
+}
+
+.text-content h3 {
+  margin: 0 0 8px;
+  line-height: 1.4;
+}
+
+.text-content h3 a {
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-family: "Instrument Serif", serif;
+  font-weight: normal;
+}
+
+/* .text-content h3 a:hover {
+      color: #0073e6;
+    } */
+
+.text-content p {
+  font-size: 14px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.thumbnail {
+  flex-shrink: 0;
+  width: 120px; /* Fixed width for the thumbnail */
+  height: 67px; /* Maintain a 16:9 aspect ratio */
+  overflow: hidden; /* Ensure any overflow is clipped */
+  border-radius: 8px; /* Optional: rounded corners */
+  background-color: #f0f0f0; /* Placeholder background color */
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image fills the box */
+  object-position: center; /* Centers the image within the box */
+}
+
+/* ========================================================================== */
+/* -------------------------------------------------------------------------- */
+/* ============================================================================ */
