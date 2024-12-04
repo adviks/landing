@@ -23,13 +23,34 @@ body {
 }
 
 #logo {
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 32px;
+  font-weight: 400;
   border: none;
+  font-family: "Instrument Serif", serif;
+  font-style: italic;
+  display: block;
 }
 #logo:hover {
   color: #eee;
 }
+
+
+.mockup_image {
+  width: 40%; /* Set the desired width */
+  height: auto; /* Maintain aspect ratio */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation for hover effect */
+  margin-top: 10px;
+  margin-bottom: 40px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mockup_image:hover {
+  transform: scale(1.03); /* Slight zoom on hover */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+}
+
 
 .container {
   display: flex;
