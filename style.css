@@ -22,15 +22,24 @@ body {
   font-size: 18px;
 }
 
-#logo {
-  font-size: 32px;
-  font-weight: 400;
+.logo{
+  display: flex;
+  align-items: center;
+}
+#logo{
+  height: 28px;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+#logo-text{
+  font-size: 28px;
+  font-weight: 700;
   border: none;
-  font-family: "Instrument Serif", serif;
-  font-style: italic;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   display: block;
 }
-#logo:hover {
+#logo-text:hover {
   color: #eee;
 }
 
