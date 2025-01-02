@@ -1,9 +1,4 @@
-window.CustomSubstackWidget = {
-  substackUrl: "advik.substack.com",
-  placeholder: "Enter your email",
-  buttonText: "Get Started →",
-  theme: "none",
-};
+
 
 // Substack Feed
 async function fetchSubstackPosts() {
