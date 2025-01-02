@@ -15,46 +15,34 @@
         <p><strong>The Analyst</strong> simplifies complex topics with sharp insights, making <strong>data</strong> and <strong>research-driven stories</strong> easy and engaging to understand.</p>
        
         <div class="form-container">
-          <form id="signup-form" class="form" method="post" action="https://app.convertkit.com/forms/3277206/subscriptions">
-              <input 
-                  class="form-input" 
-                  type="email" 
-                  name="email_address" 
-                  required 
-                  placeholder="your@email.com">
-              <button 
-                  type="submit" 
-                  class="form-button">
-                  Subscribe
-              </button>
-          </form>
-          <div id="success-message" class="success-message">
-              <p>Congratulations 🎉</p>
-              <p>In just a moment, you'll be receiving my welcome email.</p>
-          </div>
-      </div>
-        <!-- Substack Signup Form -->
-        <!-- <div id="custom-substack-embed"></div>   
-        <p class="privacy-text">I respect your privacy. Unsubscribe at any time.</p>
+            <form id="signup-form" class="form" method="post" action="https://app.convertkit.com/forms/3277206/subscriptions">
+                <input 
+                    class="form-input" 
+                    type="email" 
+                    name="email_address" 
+                    required 
+                    placeholder="your@email.com">
+                <button 
+                    type="submit" 
+                    class="form-button" 
+                    id="form-submit">
+                    Get Started →
+                    <span class="spinner"></span>
+                </button>
+            </form>
         
-         -->
+            <!-- Privacy text -->
+            <p class="privacy-text" id="privacy-text">I respect your privacy. Unsubscribe at any time.</p>
+        
+            <!-- Success message after form submit -->
+            <div id="success-message" class="success-message" style="display: none;">
+                <p>Congratulations 🎉, You're now subscribed to my Newsletter.</p>
+            </div>
+        </div>
 
+      <div id="substack-posts"></div>
 
-        <!-- Backup Subscribe Form -->
-
-
-        <!-- <iframe src="https://advik.substack.com/embed"  style="border:none; " scrolling="no"></iframe> -->
-        <div id="substack-posts"></div>
     </div>
-  
 <script src="script.js"></script>
-<script>
-window.CustomSubstackWidget = {
-    substackUrl: "advik.substack.com",
-    placeholder: "Enter your email",
-    buttonText: "Get Started →",
-    theme: "none",
-  };</script>
-<script src="https://substackapi.com/widget.js" async></script>
 </body>
 </html>

@@ -1,5 +1,3 @@
-
-
 // Substack Feed
 async function fetchSubstackPosts() {
   const rss2jsonUrl =
@@ -46,48 +44,46 @@ window.onload = fetchSubstackPosts;
 
 
 
-window.addEventListener('load', function() {
-  const style = document.createElement('style');
-  style.innerHTML = `
-   .custom-substack-widget {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  max-width: 100%; /* You can adjust the max-width as needed */
-  margin: 0 auto;
-}
+// Success message on form submit 
+const signupForm = document.getElementById("signup-form");
+    const successMessage = document.getElementById("success-message");
+    const privacyText = document.getElementById("privacy-text");
+    const submitButton = document.getElementById("form-submit"); 
+    signupForm.addEventListener("submit", function (event) {
+        event.preventDefault();
 
-.custom-substack-widget input {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  border: 2px solid #e54f2d;
-  border-radius: 4px;
-  font-size: 16px;
-  box-sizing: border-box;
-  flex: 0;
-}
+        // Show loading spinner
+        submitButton.classList.add("loading");
+        submitButton.disabled = true;
 
-.custom-substack-widget button {
-  width: 100%;
-  padding: 12px;
-  background-color: #e54f2d;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  font-size: 16px;
-  cursor: pointer;
-  box-sizing: border-box;
-}
+        // Get form data
+        const formData = new FormData(signupForm);
 
-.custom-substack-widget button:hover {
-  background-color: #d3451e; /* Optional hover effect */
-}
+        // Simulate form submission delay (2-3 seconds)
+        setTimeout(() => {
+            // Submit form data using fetch
+            fetch(signupForm.getAttribute("action"), {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json",
+                },
+            })
+                .then((response) => {
+                    // Hide form (optional)
+                    // signupForm.style.display = "none";
+                    privacyText.style.display = "none";
 
-.custom-substack-widget input:focus, .custom-substack-widget button:focus {
-  outline: none;
-}
-
-  `;
-  document.head.appendChild(style);
-});
+                    // Show success message
+                    successMessage.style.display = "block";
+                })
+                .catch((error) => {
+                    console.error(error);
+                })
+                .finally(() => {
+                    // Remove loading spinner and enable button
+                    submitButton.classList.remove("loading");
+                    submitButton.disabled = false;
+                });
+        }, 2000); // 3 seconds delay
+    });
